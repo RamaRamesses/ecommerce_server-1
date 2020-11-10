@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(routes);
 
 app.use(ErrorHandler);
-app.listen(port, () => console.log(`App listening at ${port}`));
+// app.listen(port, () => console.log(`App listening at ${port}`));
 
 
 module.exports = app;

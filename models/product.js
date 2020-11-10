@@ -14,9 +14,30 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Product.init({
-    name: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty: {
+          args: true,
+          msg: "Nama produk tidak boleh kosong!"
+        }
+      }
+    },
     image_url: DataTypes.STRING,
-    price: DataTypes.DOUBLE,
+    price: {
+      type: DataTypes.INTEGER,
+      validate: {
+        notEmpty: {
+          args: true,
+          msg: "Harga produk tidak boleh kosong!"
+        },
+        isNotNegative(value){
+          if(value < 0){
+            throw new Error('Harga tidak boleh negatif!')
+          }
+        }
+      }
+    },
     stock: DataTypes.INTEGER
   }, {
     sequelize,
