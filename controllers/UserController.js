@@ -32,7 +32,7 @@ class UserController {
                         id: user.id,
                         email: user.email
                     })
-                    res.status(200).json({access_token});
+                    res.status(200).json({access_token, role: user.role});
                 } else {
                     throw {message: 'Email/password salah', status: 401};
                 }
