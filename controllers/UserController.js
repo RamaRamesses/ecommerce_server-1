@@ -30,7 +30,8 @@ class UserController {
                 if(verifyPassword(payload.password, user.password)){
                     let access_token = hashToken({
                         id: user.id,
-                        email: user.email
+                        email: user.email,
+                        role: user.role
                     })
                     res.status(200).json({access_token, role: user.role});
                 } else {
