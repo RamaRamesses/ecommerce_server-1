@@ -42,7 +42,7 @@ class ProductController {
     }
 
     static async deleteProduct(req, res, next){
-        try{
+        try {
             let product = await Product.destroy({where:{id: req.params.id}})
             res.status(200).json({message: `Product with id. ${req.params.id} has been removed`});
         } catch(err){
