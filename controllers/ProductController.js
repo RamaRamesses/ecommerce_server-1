@@ -34,7 +34,7 @@ class ProductController {
                 price: req.body.price,
                 stock: req.body.stock
             }
-            let product = await Product.update(payload, {where:{id: req.body.id}});
+            let product = await Product.update(payload, {where:{id: req.params.id}});
             res.status(200).json(product);
         } catch (err) {
             next(err)

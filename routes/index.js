@@ -10,6 +10,7 @@ router.post('/login', UserController.login);
 router.get('/products', ProductController.showProducts);
 router.use(authentication);
 router.post('/products', authorization , ProductController.addProduct);
-router.delete('/products/:id', authorization, ProductController.deleteProduct)
+router.put('/products/:id', authorization, ProductController.editProduct);
+router.delete('/products/:id', authorization, ProductController.deleteProduct);
 
 module.exports = router;
