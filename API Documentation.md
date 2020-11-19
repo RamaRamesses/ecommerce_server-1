@@ -130,7 +130,8 @@
             "name" : "Kopikap",
             "image_url" : "https://jumbo.co.id/wp-content/uploads/2020/07/8.jpeg",
             "price" : "5000",
-            "stock" : 5
+            "stock" : 5,
+            "category" : "Minuman"
         }
      ```
 
@@ -277,3 +278,215 @@
   * **Code:** 404 NOT FOUND <br />
     **Content:** `{ error : "Not Found" }`
 
+<hr>
+
+
+* **URL**
+
+  /products/:category
+
+* **Method:**
+
+  `GET`
+  
+* **Params**
+
+  ```
+        /products/appliances
+  ```
+
+* **Success Response:**
+  
+  * **Code:** 200 <br />
+ 
+* **Error Response:**
+
+
+  * **Code:** 500 Internal Server Error <br />
+    **Content:** `{ error : "Internal Server Error" }`
+
+  OR
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `{ error : "Not Found" }`
+
+<hr>
+
+
+* **URL**
+
+  /transactions
+
+* **Method:**
+
+  `GET`
+  
+
+* **Success Response:**
+  
+  * **Code:** 200 <br />
+ 
+* **Error Response:**
+
+
+  * **Code:** 500 Internal Server Error <br />
+    **Content:** `{ error : "Internal Server Error" }`
+
+<hr>
+
+
+* **URL**
+
+  /cart
+
+* **Method:**
+
+  `GET`
+
+* **Success Response:**
+  
+  * **Code:** 200 <br />
+ 
+* **Error Response:**
+
+
+  * **Code:** 500 Internal Server Error <br />
+    **Content:** `{ error : "Internal Server Error" }`
+
+<hr>
+
+
+* **URL**
+
+  /addToCart/:id
+
+* **Method:**
+
+  `POST`
+  
+* **Header Params**
+
+  ```
+        {
+            "access_token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJyYW1hMTIzNDUiLCJpYXQiOjE2MDQwMjkyMDZ9.        
+            p8G8p1cMURN5-U1YpRNbTAxdWTG071tTC_DxZf0ceZQ",
+        }
+  ```
+
+* **Data Params**
+
+  ```
+        {
+            "quantity" : 2
+        }
+  ```
+
+* **Success Response:**
+  
+  * **Code:** 200 <br />
+ 
+* **Error Response:**
+
+
+  * **Code:** 500 INTERNAL SERVER ERROR <br />
+    **Content:** `{ error : "error" }`
+
+  OR
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `{ error : "Not Found" }`
+
+  OR
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** `{ error : "Authentication failed" }`
+
+
+<hr>
+
+
+* **URL**
+
+  /cart/:id
+
+* **Method:**
+
+  `DELETE`
+  
+* **Header Params**
+
+  ```
+        {
+            "access_token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJyYW1hMTIzNDUiLCJpYXQiOjE2MDQwMjkyMDZ9.        
+            p8G8p1cMURN5-U1YpRNbTAxdWTG071tTC_DxZf0ceZQ",
+        }
+  ```
+
+* **Success Response:**
+  
+  * **Code:** 200 <br />
+ 
+* **Error Response:**
+
+
+  * **Code:** 500 INTERNAL SERVER ERROR <br />
+    **Content:** `{ error : "error" }`
+
+  OR
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `{ error : "Not Found" }`
+
+  OR
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** `{ error : "Authentication failed" }`
+
+
+<hr>
+
+
+* **URL**
+
+  /cart/:id
+
+* **Method:**
+
+  `POST`
+  
+* **Header Params**
+
+  ```
+        {
+            "access_token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJyYW1hMTIzNDUiLCJpYXQiOjE2MDQwMjkyMDZ9.        
+            p8G8p1cMURN5-U1YpRNbTAxdWTG071tTC_DxZf0ceZQ",
+        }
+  ```
+  
+* **Data Params**
+
+  ```
+        {
+            "quantity" : 2
+        }
+  ```
+
+* **Success Response:**
+  
+  * **Code:** 200 <br />
+ 
+* **Error Response:**
+
+
+  * **Code:** 500 INTERNAL SERVER ERROR <br />
+    **Content:** `{ error : "error" }`
+
+  OR
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `{ error : "Not Found" }`
+
+  OR
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** `{ error : "Authentication failed" }`
