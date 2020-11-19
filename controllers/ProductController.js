@@ -7,7 +7,8 @@ class ProductController {
                 name: req.body.name,
                 image_url: req.body.image_url,
                 price: req.body.price,
-                stock: req.body.stock
+                stock: req.body.stock,
+                category: req.body.category
             }
             let product = await Product.create(payload);
             res.status(201).json(product);
