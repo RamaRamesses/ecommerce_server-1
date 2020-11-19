@@ -17,7 +17,7 @@ class ProductController {
         
     }
 
-    static async showProducts(req, res, next){
+    static async showProducts(req, res, next) {
         try {
             let product = await Product.findAll();
             res.status(200).json(product);
@@ -26,7 +26,17 @@ class ProductController {
         }
     }
 
-    static async editProduct(req, res, next){
+    static async showByCategory(req, res, next) {
+        try {
+            const {category} = req.params;
+            const product = await Product.findAll({where: {category}});
+            res.status(200).json(product);
+        } catch (err) {
+            next(err);
+        }
+    }
+
+    static async editProduct(req, res, next) {
         try {
             let payload = {
                 name: req.body.name,
@@ -41,11 +51,23 @@ class ProductController {
         }
     }
 
-    static async deleteProduct(req, res, next){
+    static async deleteProduct(req, res, next) {
         try {
             let product = await Product.destroy({where:{id: req.params.id}})
             res.status(200).json({message: `Product with id. ${req.params.id} has been removed`});
         } catch(err){
+            next(err);
+        }
+    }
+
+    static async patchProduct(req, res, next) {
+        try {
+            const payload = {
+                stock: req.body.stock
+            }
+            const product = await Product.update(payload, { where: { id: req.params.id }});
+            res.status(200).json(product);
+        } catch (err) {
             next(err);
         }
     }
