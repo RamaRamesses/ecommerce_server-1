@@ -4,6 +4,10 @@
 
 https://github.com/RamaRamesses/ecommerce_client_cms-1
 
+**The Customer client site goes here**
+
+https://github.com/RamaRamesses/ecommerce_client_customer
+
 **Heroku Deploy**
 
 https://ecommerce-ibrhm-app.herokuapp.com/
