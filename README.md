@@ -1,6 +1,6 @@
 # ecommerce_server
 
-**Title**
+**Server for E-Commerce CMS**
 ----
   E-Commerce App
 
