@@ -1,5 +1,9 @@
 # ecommerce_server
 
+**The CMS Vue.js client goes here**
+
+https://github.com/RamaRamesses/ecommerce_client_cms-1
+
 **Server for E-Commerce CMS**
 ----
   E-Commerce App
