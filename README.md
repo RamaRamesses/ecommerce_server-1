@@ -12,7 +12,18 @@ https://github.com/RamaRamesses/ecommerce_client_customer
 
 https://ecommerce-ibrhm-app.herokuapp.com/
 
-**Server for E-Commerce CMS**
+## Server for E-Commerce CMS
+
+## Project setup
+```
+npm install
+```
+
+### Start the server for development
+```
+node app.js
+```
+
 ----
   E-Commerce App
 
